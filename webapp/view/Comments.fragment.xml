@@ -1,0 +1,111 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:f="sap.ui.layout.form">
+	<Dialog id="idCommentsView" title="Comments" contentWidth="75%">
+		<VBox class="sapUiSmallMargin">
+			<f:SimpleForm id="IdCommentsDetails" editable="false" layout="ResponsiveGridLayout" title="Comments" labelSpanXL="4" labelSpanL="4"
+				labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+				columnsL="2" columnsM="1" backgroundDesign="Solid" singleContainerFullSize="false">
+				<f:content>
+					<!--Fleet1 Comments-->
+					<core:Title text="Fleet 1"/>
+					<Label text="Comments 1"/>
+					<TextArea value="{commentsModel>/Fleet1}" id="idF1Comment1" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 2"/>
+					<TextArea value="{commentsModel>/Fleet2}" id="idF1Comment2" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 3"/>
+					<TextArea value="{commentsModel>/Fleet3}" id="idF1Comment3" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 4"/>
+					<TextArea value="{commentsModel>/Fleet4}" id="idF1Comment4" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Approve/Reject Comment"/>
+					<TextArea value="{commentsModel>/Fleet5}" id="idF1Comment5" growing="true" maxLength="110" enabled="false"/>
+					<!--Supervisor Comments -->
+					<core:Title text="Supervisor"/>
+					<Label text="Comments 1"/>
+					<TextArea value="{commentsModel>/Sup1}" id="idSupComment1" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 2"/>
+					<TextArea value="{commentsModel>/Sup2}" id="idSupComment2" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 3"/>
+					<TextArea value="{commentsModel>/Sup3}" id="idSupComment3" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 4"/>
+					<TextArea value="{commentsModel>/Sup4}" id="idSupComment4" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Approve/Reject Comment"/>
+					<TextArea value="{commentsModel>/Sup5}" id="idSupComment5" growing="true" maxLength="110" enabled="false"/>
+					<!--Finance Comments-->
+					<core:Title text=" Finance"/>
+					<Label text="Comments 1"/>
+					<TextArea value="{commentsModel>/Fin1}" id="idFIComment1" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 2"/>
+					<TextArea value="{commentsModel>/Fin2}" id="idFIComment2" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 3"/>
+					<TextArea value="{commentsModel>/Fin3}" id="idFIComment3" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 4"/>
+					<TextArea value="{commentsModel>/Fin4}" id="idFIComment4" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Approve/Reject Comment"/>
+					<TextArea value="{commentsModel>/Fin5}" id="idFIComment5" growing="true" maxLength="110" enabled="false"/>
+					<!-- Treasury Comments-->
+					<core:Title text="Treasury"/>
+					<Label text="Comments 1"/>
+					<TextArea value="{commentsModel>/TRM1}" id="idTComment1" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 2"/>
+					<TextArea value="{commentsModel>/TRM2}" id="idTComment2" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 3"/>
+					<TextArea value="{commentsModel>/TRM3}" id="idTComment3" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 4"/>
+					<TextArea value="{commentsModel>/TRM4}" id="idTComment4" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Approve/Reject Comment"/>
+					<TextArea value="{commentsModel>/TRM5}" id="idTComment5" growing="true" maxLength="110" enabled="false"/>
+					<!-- HR Comments-->
+					<core:Title text="Human Resource"/>
+					<Label text="Comments 1"/>
+					<TextArea value="{commentsModel>/Hr1}" id="idHRComment1" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 2"/>
+					<TextArea value="{commentsModel>/Hr2}" id="idHRComment2" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 3"/>
+					<TextArea value="{commentsModel>/Hr3}" id="idHRComment3" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 4"/>
+					<TextArea value="{commentsModel>/Hr4}" id="idHRComment4" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Approve/Reject Comment"/>
+					<TextArea value="{commentsModel>/Hr5}" id="idHRComment5" growing="true" maxLength="110" enabled="false"/>
+					<!--Delivery Comments-->
+					<core:Title text="Delivery"/>
+					<Label text="Comments 1"/>
+					<TextArea value="{commentsModel>/Delv1}" id="idDComment1" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 2"/>
+					<TextArea value="{commentsModel>/Delv2}" id="idDComment2" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 3"/>
+					<TextArea value="{commentsModel>/Delv3}" id="idDComment3" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 4"/>
+					<TextArea value="{commentsModel>/Delv4}" id="idDComment4" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Approve/Reject Comment"/>
+					<TextArea value="{commentsModel>/Delv5}" id="idDComment5" growing="true" maxLength="110" enabled="false"/>
+					<!-- Sales Comments-->
+					<core:Title text="Sales"/>
+					<Label text="Comments 1"/>
+					<TextArea value="{commentsModel>/Sales1}" id="idSComment1" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 2"/>
+					<TextArea value="{commentsModel>/Sales2}" id="idSComment2" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 3"/>
+					<TextArea value="{commentsModel>/Sales3}" id="idSComment3" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 4"/>
+					<TextArea value="{commentsModel>/Sales4}" id="idSComment4" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Approve/Reject Comment"/>
+					<TextArea value="{commentsModel>/Sales5}" id="idSComment5" growing="true" maxLength="110" enabled="false"/>
+					<!-- Fleet 2 Comments-->
+					<core:Title text="Fleet 2"/>
+					<Label text="Comments 1"/>
+					<TextArea value="{commentsModel>/Fleet6}" id="idF2Comment1" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 2"/>
+					<TextArea value="{commentsModel>/Fleet7}" id="idF2Comment2" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 3"/>
+					<TextArea value="{commentsModel>/Fleet8}" id="idF2Comment3" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Comments 4"/>
+					<TextArea value="{commentsModel>/Fleet9}" id="idF2Comment4" growing="true" maxLength="110" enabled="false"/>
+					<Label text="Approve/Reject Comment"/>
+					<TextArea value="{commentsModel>/Fleet10}" id="idF2Comment5" growing="true" maxLength="110" enabled="false"/>
+				</f:content>
+			</f:SimpleForm>
+		</VBox>
+		<beginButton>
+			<Button text="Close" press="onCloseDialog"/>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

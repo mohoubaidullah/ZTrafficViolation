@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZTRAFFIC_VIOLATION_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="ViolationWorkflow" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Level"/>
+				</Key>
+				<Property Name="Level" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Traffic Violation Level"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Plans" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Position" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="ViolationDetails" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ViolationId"/>
+				</Key>
+				<Property Name="ViolationId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Violation ID(Generated)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ViolationNo" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Violation Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ViolationDesc" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Violation Desc AR"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ViolationDescEn" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Violation Desc EN"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ViolationDate" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ViolationTime" Type="Edm.Time" Precision="6" sap:unicode="false" sap:label="VIOLATION_TIME" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ViolationValue" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2" sap:unicode="false" sap:label="Violation Value"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="City" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="City" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FleetNumAr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Fleet objectNo."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FleetNumEn" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="License plate"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TruckType" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zzisthimarano" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Equnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Equipment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ChassisNum" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Chassis no."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Ename" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Address suppl."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zidentity" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="IC Number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Violation Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Note" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Char80" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UploadDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Created on" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Aedat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Changed On" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Aetim" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Changed at" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Aenam" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Changed by" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PayFrom" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Paid From" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PayAedat" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Changed On" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PayAetim" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Changed at" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PayAenam" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Changed by" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Vkbur" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales Office" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ZwiId" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Work Item ID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet1Status" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet1User" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet1AsDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet1AsTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet1ApDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet1ApTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet2Status" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet2User" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet2AsDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet2AsTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet2ApDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet2ApTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DelvStatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DelvUser" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DelvAsDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DelvAsTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DelvApDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DelvApTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FinStatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FinUser" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FinAsDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FinAsTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FinApDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FinApTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="HrStatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="HrUser" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="HrAsDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="HrAsTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="HrApDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="HrApTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="CurrentApproval" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Current Approval" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DigitalSign" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Digital Sign" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<NavigationProperty Name="Comments" Relationship="ZTRAFFIC_VIOLATION_SRV.ToComments" FromRole="FromRole_ToComments"
+					ToRole="ToRole_ToComments" sap:label="Comments"/>
+				<NavigationProperty Name="History" Relationship="ZTRAFFIC_VIOLATION_SRV.ToApprovalHistory" FromRole="FromRole_ToApprovalHistory"
+					ToRole="ToRole_ToApprovalHistory" sap:label="History"/>
+			</EntityType>
+			<EntityType Name="ApprovalHistory" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ViolationId"/>
+					<PropertyRef Name="Lvl"/>
+				</Key>
+				<Property Name="ViolationId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Violation ID(Generated)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Lvl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Traffic Violation Level"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Changed by"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ChangedTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ChangedDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Comments" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ViolationId"/>
+				</Key>
+				<Property Name="ViolationId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Violation ID(Generated)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet1" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet2" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet3" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet4" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet5" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet6" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet7" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet8" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet9" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fleet10" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fin1" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fin2" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fin3" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fin4" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fin5" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Hr1" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Hr2" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Hr3" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Hr4" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Hr5" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Delv1" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Delv2" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Delv3" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Delv4" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Delv5" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Sales1" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Sales2" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Sales3" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Sales4" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Sales5" Type="Edm.String" Nullable="false" MaxLength="120" sap:unicode="false" sap:label="Comment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="EmployeeDetails" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Pernr"/>
+				</Key>
+				<Property Name="Ename" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Address suppl."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zidentity" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="IC Number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="FileUpload" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ViolationId"/>
+					<PropertyRef Name="Counter"/>
+				</Key>
+				<Property Name="ViolationId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Violation ID(Generated)"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Counter" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Requested Counts"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Filename" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Value" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="VALUE" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Mimetype" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="GetSalesOffice" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="SalesOffice"/>
+				</Key>
+				<Property Name="SalesOffice" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SalesOfficeText" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="ViolationMaster" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ViolAr"/>
+				</Key>
+				<Property Name="ViolAr" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Violation Desc AR"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ViolEn" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Violation Desc EN"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PayFrom" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Viol Paid Pref"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<Association Name="ToApprovalHistory" sap:content-version="1" sap:label="ToHistory">
+				<End Type="ZTRAFFIC_VIOLATION_SRV.ViolationDetails" Multiplicity="0..1" Role="FromRole_ToApprovalHistory"/>
+				<End Type="ZTRAFFIC_VIOLATION_SRV.ApprovalHistory" Multiplicity="*" Role="ToRole_ToApprovalHistory"/>
+			</Association>
+			<Association Name="ToComments" sap:content-version="1" sap:label="ToComments">
+				<End Type="ZTRAFFIC_VIOLATION_SRV.ViolationDetails" Multiplicity="0..1" Role="FromRole_ToComments"/>
+				<End Type="ZTRAFFIC_VIOLATION_SRV.Comments" Multiplicity="0..1" Role="ToRole_ToComments"/>
+			</Association>
+			<EntityContainer Name="ZTRAFFIC_VIOLATION_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="ViolationWorkFlowSet" EntityType="ZTRAFFIC_VIOLATION_SRV.ViolationWorkflow" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="ViolationDetailsSet" EntityType="ZTRAFFIC_VIOLATION_SRV.ViolationDetails" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="ApprovalHistorySet" EntityType="ZTRAFFIC_VIOLATION_SRV.ApprovalHistory" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="CommentsSet" EntityType="ZTRAFFIC_VIOLATION_SRV.Comments" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="EmployeeDetailsSet" EntityType="ZTRAFFIC_VIOLATION_SRV.EmployeeDetails" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="FileUploadSet" EntityType="ZTRAFFIC_VIOLATION_SRV.FileUpload" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="GetSalesOfficeSet" EntityType="ZTRAFFIC_VIOLATION_SRV.GetSalesOffice" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="ViolationMasterSet" EntityType="ZTRAFFIC_VIOLATION_SRV.ViolationMaster" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<AssociationSet Name="ToApprovalHistory_AssocSet" Association="ZTRAFFIC_VIOLATION_SRV.ToApprovalHistory" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="ViolationDetailsSet" Role="FromRole_ToApprovalHistory"/>
+					<End EntitySet="ApprovalHistorySet" Role="ToRole_ToApprovalHistory"/>
+				</AssociationSet>
+				<AssociationSet Name="ToComments_AssocSet" Association="ZTRAFFIC_VIOLATION_SRV.ToComments" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="ViolationDetailsSet" Role="FromRole_ToComments"/>
+					<End EntitySet="CommentsSet" Role="ToRole_ToComments"/>
+				</AssociationSet>
+			</EntityContainer>
+			<atom:link rel="self" href="http://gwdev.gbc.sa:8047/sap/opu/odata/sap/ZTRAFFIC_VIOLATION_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/>
+			<atom:link rel="latest-version" href="http://gwdev.gbc.sa:8047/sap/opu/odata/sap/ZTRAFFIC_VIOLATION_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

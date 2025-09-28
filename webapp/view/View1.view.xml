@@ -1,0 +1,172 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns:l="sap.ui.layout" controllerName="Fleet.ZTrafficViolation.controller.View1"
+	displayBlock="true">
+	<Shell id="shell">
+		<App id="idAppControl">
+			<pages>
+				<Page title="{i18n>title}">
+					<content>
+						<!--<MessageStrip visible="{localModel2>/Visible}" text="{localModel2>/Text}" type="{localModel2>/Type}" showIcon="true" showCloseButton="true"-->
+						<!--	class="sapUiMediumMarginBottom"></MessageStrip>-->
+						<!--Employee details-->
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm id="IdViolationDetails" editable="true" layout="ResponsiveGridLayout" title="Traffic Violation Status: {/MessageBinding}"
+								labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0"
+								emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1" backgroundDesign="Solid" singleContainerFullSize="false">
+								<f:content>
+									<core:Title text=""/>
+									<Label text="{i18n>ViolationID}" required="true"/>
+									<Text id="idViolationId" text="{/ViolationId}"/>
+									<Label text="Employee Name"/>
+									<Text id="idNameEn" text="{/Ename}"/>
+									<Label text="Employee ID"/>
+									<Input id="idEmpId" value="{/Pernr}" enabled="{localModel>/EmployeeID}" submit="onEnterEmpID" showSuggestion="true" showValueHelp="true"
+										valueHelpRequest="handleValueHelp" required="true">
+										<suggestionItems>
+											<core:Item text="{Pernr}"/>
+										</suggestionItems>
+									</Input>
+									<Label text="Violation No"/>
+									<Text text="{/ViolationNo}" id="idViolationNo"/>
+									<Label text="Violation Desc(AR)" required="true"/>
+									<Text text="{/ViolationDesc}" id="idViolationDesc"/>
+									<Label text="Violation Desc(En)" required="true"/>
+									<ComboBox id="idViolationDescEn" items="{ path: 'ViolMaster>/results', sorter: { path: 'ViolEn' } }" showSecondaryValues="true"
+										filterSecondaryValues="true" value="{/ViolationDescEn}" selectedKey="{/ViolationDescEn}" enabled="{localModel>/ViolationDescEn}"
+										selectionChange="onChangeLocal">
+										<core:ListItem key="{ViolMaster>ViolEn}" text="{ViolMaster>ViolEn}" additionalText="{ViolMaster>PayFrom}"/>
+									</ComboBox>
+									<!--<ComboBox id="idViolationDescEn" items="{ path: '/ViolationMasterSet', sorter: { path: 'ViolEn' } }"  >-->
+									<!--	<core:ListItem key="{ViolEn}" text="{ViolEn}" additionalText="{ViolAr}"/>-->
+									<!--</ComboBox>-->
+									<Label text="Violation Date"/>
+									<Text text="{/ViolationDate}" id="idViolationDate"/>
+									<Label text="Violation Time"/>
+									<Text text="{/ViolationTime}" id="idViolationTime"/>
+									<Label text="Violation Value"/>
+									<Text text="{/ViolationValue}" id="idViolationValue"/>
+									<Label text="City"/>
+									<Text text="{/City}" id="idCity"/>
+									<Label text="Plate Number"/>
+									<Text text="{/FleetNumEn}" id="idFleetNumEn"/>
+									<Label text="Isthimara No"/>
+									<Text text="{/Zzisthimarano}" id="idZzisthimarano"/>
+									<core:Title text=""/>
+									<Label text="Fleet"/>
+									<Text text="{/Equnr}" id="idEqunr"/>
+									<Label text="Iquama/National ID"/>
+									<Text id="idZidentity" text="{/Zidentity}"/>
+									<Label text="Status"/>
+									<Text id="idStatus" text="{/Status}"/>
+									<Label text="Sales Office"/>
+									<Text id="idVkbur" text="{/Vkbur}-{localModel>/SalesOfficeText}"/>
+									<Label text="Upload Date"/>
+									<Text text="{/UploadDate}" id="idUploadDate"/>
+									<Label text="Upload Source"/>
+									<Text text="{/UploadedFromText}" id="idSource"/>
+									<Label text="Upload Time"/>
+									<Text text="{/UploadedTime}" id="idUploadedTime"/>
+									<Label text="Upload User"/>
+									<Text text="{/UploadedBy}" id="idUploadedUser"/>
+									<Label text="Pay from" required="true"/>
+									<Select id="idPayFrom" enabled="{localModel>/PayFrom}" selectedKey="{/PayFrom}" forceSelection="true">
+										<items>
+											<core:Item xmlns:core="sap.ui.core" key="" text="" id="item0"/>
+											<core:Item xmlns:core="sap.ui.core" key="Berain" text="Berain" id="Berain"/>
+											<core:Item xmlns:core="sap.ui.core" key="Driver" text="Driver" id="Driver"/>
+											<core:Item xmlns:core="sap.ui.core" key="Salesman" text="Salesman" id="Salesman"/>
+											<core:Item xmlns:core="sap.ui.core" key="Transport" text="Transporter" id="Transport"/>
+										</items>
+									</Select>
+									<Label text="Company"/>
+									<Text text="{/Company}" id="idCompany"/>
+									<Label text="Current Approver"/>
+									<Text text="{ path : '/CurrentApproval', formatter: '.formatter.approverText' }" id="IdCurrentApproval"/>
+									<Label text="Note"/>
+									<Text text="{/Note}" id="idNote"/>
+								</f:content>
+							</f:SimpleForm>
+						</VBox>
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm id="IdInspectDoc" editable="true" layout="ResponsiveGridLayout" title="Please Upload The Supporting Document form Vendor(PDF/JPG)"
+								labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0"
+								emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" backgroundDesign="Solid" singleContainerFullSize="false"
+								visible="{localModel>/Fleet2Upload}">
+								<f:content>
+									<Label text="Upload Document 1" required="{localModel>/MandatoryUpload}"/>
+									<u:FileUploader width="600px" id="fileUploader1" name="myFileUpload1" tooltip="Upload Clearance Document 1"
+										required="{localModel>/MandatoryUpload}"/>
+									<Label text="Upload Document 2"/>
+									<u:FileUploader width="600px" id="fileUploader2" name="myFileUpload2" tooltip="Upload Clearance Document 2"/>
+								</f:content>
+							</f:SimpleForm>
+						</VBox>
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm id="idComments" editable="true" layout="ResponsiveGridLayout" title="Comments Section" labelSpanXL="4" labelSpanL="4"
+								labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+								columnsL="2" columnsM="1" backgroundDesign="Solid" singleContainerFullSize="false">
+								<f:content>
+									<core:Title text="Comments 1"/>
+									<TextArea value="{/Comment1}" id="idComment1" growing="true" width="100%" maxLength="110" enabled="{localModel>/Comment1}" required="{localModel>/MandatoryComment1}"/>
+									<core:Title text="Comments 2"/>
+									<TextArea value="{/Comment2}" id="idComment2" growing="true" width="100%" maxLength="110" enabled="{localModel>/Comment2}"/>
+									<core:Title text="Comments 3"/>
+									<TextArea value="{/Comment3}" id="idComment3" growing="true" width="100%" maxLength="110" enabled="{localModel>/Comment3}"/>
+									<core:Title text="Comments 4"/>
+									<TextArea value="{/Comment4}" id="idComment4" growing="true" width="100%" maxLength="110" enabled="{localModel>/Comment4}"/>
+									<core:Title text=""/>
+									<!--<Label width="10px"></Label>-->
+									<Button type="Emphasized" text="View Comment" press="onViewComment" width="180px" id="IdF2Comment" visible="{localModel>/ViewComments}">
+										<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+									</Button>
+									<!--<Button type="Emphasized" text="View History" press="onViewHistory" width="180px" id="IdHistory">-->
+									<!--	<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
+									<!--</Button>-->
+									<Button type="Emphasized" text="Signature" press="onSignRequest" width="180px" id="Idsign" visible="{localModel>/DigitalSignButton}">
+										<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+									</Button>
+									<core:Title text=""/>
+									<Button type="Emphasized" text="Edit" press="onEdit" width="180px" id="IdEdit" enabled="{localModel>/EditButton}">
+										<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+									</Button>
+									<Button type="Emphasized" text="Save" press="onSaveRequest" width="180px" id="Idsubmit" enabled="{localModel>/SaveButton}">
+										<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+									</Button>
+								</f:content>
+								<!--<Label width="10px"></Label>-->
+								<!--<Button type="Emphasized" text="Edit" press="onEdit" width="180px" id="IdEdit" enabled="{localModel>/EditButton}">-->
+								<!--	<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
+								<!--</Button>-->
+								<!--<Button type="Emphasized" text="Save" press="onSaveRequest" width="180px" id="Idsubmit" enabled="{localModel>/SaveButton}">-->
+								<!--	<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
+								<!--</Button>-->
+							</f:SimpleForm>
+						</VBox>
+						<!--<HBox class="sapUiSmallMargin">-->
+						<!--	<f:SimpleForm id="idAction" editable="true" layout="ResponsiveGridLayout" title="Action Center" labelSpanXL="4" labelSpanL="4"-->
+						<!--		labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"-->
+						<!--		columnsL="2" columnsM="1" backgroundDesign="Solid" singleContainerFullSize="false">-->
+						<!--		<f:content>-->
+						<!--			<Label width="10px"></Label>-->
+						<!--			<Button type="Emphasized" text="View Comment" press="onViewComment" width="180px" id="IdF2Comment" visible="{localModel>/ViewComments}">-->
+						<!--				<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
+						<!--			</Button>-->
+						<!--			<Label width="10px"></Label>-->
+						<!--			<Button type="Emphasized" text="Signature" press="onSignRequest" width="180px" id="Idsign" visible="{localModel>/DigitalSignButton}">-->
+						<!--				<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
+						<!--			</Button>-->
+						<!--			<Button type="Emphasized" text="Edit" press="onEdit" width="180px" id="IdEdit" enabled="{localModel>/EditButton}">-->
+						<!--				<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
+						<!--			</Button>-->
+						<!--			<Button type="Emphasized" text="Save" press="onSaveRequest" width="180px" id="Idsubmit" enabled="{localModel>/SaveButton}">-->
+						<!--				<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
+						<!--			</Button>-->
+						<!--		</f:content>-->
+						<!--	</f:SimpleForm>-->
+						<!--</HBox>-->
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
