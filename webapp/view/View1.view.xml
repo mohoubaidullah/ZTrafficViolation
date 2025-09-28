@@ -119,9 +119,7 @@
 									<Button type="Emphasized" text="View Comment" press="onViewComment" width="180px" id="IdF2Comment" visible="{localModel>/ViewComments}">
 										<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
 									</Button>
-									<!--<Button type="Emphasized" text="View History" press="onViewHistory" width="180px" id="IdHistory">-->
-									<!--	<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
-									<!--</Button>-->
+
 									<Button type="Emphasized" text="Signature" press="onSignRequest" width="180px" id="Idsign" visible="{localModel>/DigitalSignButton}">
 										<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
 									</Button>
@@ -133,13 +131,7 @@
 										<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
 									</Button>
 								</f:content>
-								<!--<Label width="10px"></Label>-->
-								<!--<Button type="Emphasized" text="Edit" press="onEdit" width="180px" id="IdEdit" enabled="{localModel>/EditButton}">-->
-								<!--	<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
-								<!--</Button>-->
-								<!--<Button type="Emphasized" text="Save" press="onSaveRequest" width="180px" id="Idsubmit" enabled="{localModel>/SaveButton}">-->
-								<!--	<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>-->
-								<!--</Button>-->
+
 							</f:SimpleForm>
 						</VBox>
 						<!--<HBox class="sapUiSmallMargin">-->
